@@ -24,7 +24,8 @@ class ModelUser extends CI_Model
         $this->db->from('access_menu'); 
         $this->db->where($where); 
         return $this->db->get(); 
-    }
+    } 
+ 
     public function getUserLimit() 
     { 
         $this->db->select('*'); 
@@ -33,4 +34,4 @@ class ModelUser extends CI_Model
         return $this->db->get(); 
     } 
  
-} 
+}
