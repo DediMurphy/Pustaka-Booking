@@ -31,7 +31,7 @@ class User extends CI_Controller
         $this->load->view('templates/header', $data); 
         $this->load->view('templates/sidebar', $data); 
         $this->load->view('templates/topbar', $data); 
-        $this->load->view('user/anggota', $data); 
+        $this->load->view('buku/anggota', $data); 
         $this->load->view('templates/footer'); 
     } 
  
@@ -81,8 +81,7 @@ class User extends CI_Controller
             $this->db->where('email', $email); 
             $this->db->update('user'); 
  
-            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Profil Berhasil diubah </div>'); 
-    redirect('user'); 
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Profil Berhasil diubah </div>'); redirect('user'); 
 } 
 } 
 } 
